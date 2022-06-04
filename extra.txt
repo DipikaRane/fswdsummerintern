@@ -4,3 +4,9 @@ git bash> https://git-scm.com/downloads
 git clone https://github.com/DipikaRane/fswdsummerintern.git
 go inside fswdsummerintern
 git pull
+
+
+>>every time do this
+git add .
+git commit -m "changes"
+git push -u origin main/master
