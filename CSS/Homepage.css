@@ -4,12 +4,14 @@ body{
 }
 #top{
     background-image: url('https://i.ibb.co/S7d4dC1/change.jpg');
+    /* background-image: url('images/giphy.gif'); */
     background-size: cover;
     /* background-size: 100% 500px; */
     background-repeat: no-repeat;
     width:100%;
     height:500px;
     color:white;
+    display:inline-block;
 }
 /* h1{
     font-size:5rem;
@@ -69,7 +71,8 @@ span .img1{
 #main{
     width:100%;
     /* height:500px; */
-    background-color:#b99a9a69;
+    /* background-color:#b99a9a69; */
+    background-image: linear-gradient(to left, #84e499, #b9dae7,#84e499 );
 }
 .tilecomponent{
     margin-left:12%;
@@ -80,9 +83,10 @@ span .img1{
     display:inline-block;
     width:250px;
     height:250px;
-    background-color:white;
+    /* background-color:white; */
     margin:5%;
     box-shadow:10px 10px 10px gray;
+    background-image: linear-gradient(to left, #84e499, #b9dae7,#84e499 );
 }
 .option:hover{
     transform:scale(1.1);
