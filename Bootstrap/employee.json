@@ -1,0 +1,44 @@
+{
+  "employee": [
+    {
+      "eid": "A256FC",
+      "firstname": "Mahesh",
+      "lastname": "Sharma",
+      "emailid": "mahesh.sharma@yahoo.com",
+      "password": "mahesh",
+      "id": 1
+    },
+    {
+      "eid": "A256FC",
+      "firstname": "Mahesh",
+      "lastname": "Sharma",
+      "emailid": "mahesh.sharma@yahoo.com",
+      "password": "",
+      "id": 2
+    },
+    {
+      "eid": "A256FC",
+      "firstname": "Mahesh",
+      "lastname": "Sharma",
+      "emailid": "mahesh.sharma@yahoo.com",
+      "password": "",
+      "id": 3
+    },
+    {
+      "eid": "A256FC",
+      "firstname": "Deepika",
+      "lastname": "Rane",
+      "emailid": "deepika.joge@gmail.com",
+      "password": "deepika",
+      "id": 4
+    },
+    {
+      "eid": "A256FC",
+      "firstname": "kamla",
+      "lastname": "Vijay",
+      "emailid": "Kml.vr@yahoo.com",
+      "password": "kml",
+      "id": 5
+    }
+  ]
+}

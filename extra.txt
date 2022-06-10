@@ -20,3 +20,27 @@ extensions for VS-code to be installed
 1. tabnine
 2. Autoclose tag
 3.gilense
+
+>>>> About Node & Json-server>>>>
+Install node.js
+https://nodejs.org/en/download/
+Install POSTMAN
+
+###windows## --one time 
+>open command prompt as administrator
+>npm i -g json-server
+>close cmd
+
+##Linux/Mac OS##### -- one time
+>open cmd/terminal
+>sudo npm i -g json-server
+
+>>>open terminal in VSCode
+>>> json-server --watch employee.json --port 8500
+>>hit enter
+
+### Method ###
+1. GET
+2. POST
+3. DELETE
+4. UPDATE
