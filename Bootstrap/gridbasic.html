@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabel & Form</title>
+        <link rel="stylesheet" href="gridbasic.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3>Student Record</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Roll No.</th>
+                                <th>Name</th>
+                                <th>Subject</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mayur</td>
+                                <td>React</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Akshay</td>
+                                <td>React</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Aman</td>
+                                <td>MongoDB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- <button class="btn btn-primary">Login</button> -->
+            <hr/>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h2>Hospital Form</h2>
+                </div>
+                <div class="panel-body">
+                    <form method="POST" action="http://localhost:8600/employee">
+                        <div class="form-group">
+                            <label>Employee Id</label>
+                            <input class="form-control" value="A256FC" readonly name="eid"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" 
+                            placeholder="Enter First name" 
+                            name="firstname" id="fname"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" 
+                            placeholder="Enter Last name" 
+                            name="lastname" id="lname"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Id:</label>
+                            <input type="email" class="form-control" 
+                            placeholder="Enter Email ID" 
+                            name="emailid" id="email"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password</label>
+                            <input type="password"class="form-control" 
+                            placeholder="Enter Password" 
+                            name="password" id="pwd"/>
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </center>                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
