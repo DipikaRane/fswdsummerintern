@@ -1,0 +1,24 @@
+#first{
+    height:200px;
+    background-color: black;
+}
+#second{
+    height:200px;
+    background-color: blue;
+}
+#third{
+    height:200px;
+    background-color: rgb(100, 100, 112);
+}
+#fourth{
+    height:200px;
+    background-color: rgb(136, 53, 111);
+}
+#column1{
+    height:200px;
+    background-color: rgb(136, 53, 111);
+}
+#column2{
+    height:200px;
+    background-color: black;
+}
