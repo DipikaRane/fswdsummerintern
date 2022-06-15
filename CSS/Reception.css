@@ -28,3 +28,9 @@ ul.breadcrumb {
     background-repeat:no-repeat;
     background-size: 100% 300px;
 }
+#coupon{
+  width:400px;
+  height:400px;
+  background-color: rgb(182, 95, 95);
+  display:none;
+}

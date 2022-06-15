@@ -81,3 +81,6 @@ mongodb - https://www.mongodb.com/try/download/community
 2. POST
 3. DELETE
 4. UPDATE
+
+//generating video url
+https://www.kapwing.com/resources/how-to-create-a-url-link-for-a-video/
