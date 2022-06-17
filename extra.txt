@@ -84,3 +84,8 @@ mongodb - https://www.mongodb.com/try/download/community
 
 //generating video url
 https://www.kapwing.com/resources/how-to-create-a-url-link-for-a-video/
+
+//use for coupon
+<script>
+    window.onload=showdiv();
+</script>

@@ -79,3 +79,37 @@ city
 (7) ['Delhi', 'Mumbai', 'Pune', 'Chandigarh', 'Mohali', 'Chennai', 'Bathinda']
  
 nameOfArray.splice('start','deleteCount',arrayData)
+
+//concat
+var a=[1,2,3,'a',5]
+var b=[1,'c','b']
+a+b
+'1,2,3,a,51,c,b'
+a.concat(b)
+(8) [1, 2, 3, 'a', 5, 1, 'c', 'b']
+
+//sort
+var city=['Delhi', 'Mumbai', 'Pune', 'Kolkata', 'Chennai', 'Bathinda']
+city.sort()
+(6) ['Bathinda', 'Chennai', 'Delhi', 'Kolkata', 'Mumbai', 'Pune']
+
+var a=[3,4,6,9,2,1]
+a.sort()
+(6) [1, 2, 3, 4, 6, 9]
+
+//Array.isArray
+var a=[10];
+Array.isArray(a)
+true
+var a=10;
+Array.isArray(a)
+false
+
+//multidmensional array
+var students=[['Mark',24],['Aman',20],['Rahul',23]];
+
+let student1=['Mark',24];
+let student2=['Aman',20];
+let student3=['Rahul',23];
+
+let students=[student1,student2,student3];

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="calc.css"/>
+        <script src="calc.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="Calculator">
+                <center>
+                    <h2 style="color:white;">Calculator</h2>
+                    <br/>
+                </center>
+                <div class="calc">
+                    <input placeholder="First value" id="first" name="fvalue"/><br/><br/>
+                    <input placeholder="Second value" id="second" name="svalue"/><br/><br/>
+                </div>
+                <div class="buttons">
+                    <div class="functions">
+                        <button onclick="calc('Add')" class="btn btn-warning btnmiddle caps">+</button>
+                        <button onclick="calc('Sub')"class="btn btn-warning btnmiddle caps">-</button>
+                        <button onclick="calc('times')"class="btn btn-warning btnmiddle caps">*</button>
+                        <button onclick="calc('divi')"class="btn btn-warning btnmiddle caps">/</button>
+                        <button onclick="calc('percent')"class="btn btn-warning btnmiddle caps">%</button>
+                    </div>
+                    <div class="clear">
+                        <button onclick="clearAll()" class="btn btn-primary btnsml caps">Clear</button>
+                        <button onclick="backspace()" class="btn btn-primary btnsml caps">Backspace</button>	
+                    </div>
+                </div>
+                    <div class="output" style="color:white;">Output</div>
+            </div>
+        </div>
+    </body>
+</html>
