@@ -113,3 +113,24 @@ let student2=['Aman',20];
 let student3=['Rahul',23];
 
 let students=[student1,student2,student3];
+
+//map function
+var city=['Delhi', 'Mumbai', 'Pune', 'Kolkata', 'Chennai', 'Bathinda']
+city.map((data)=>{console.log(data)})
+Delhi
+VM48:2 Mumbai
+VM48:2 Pune
+VM48:2 Kolkata
+VM48:2 Chennai
+VM48:2 Bathinda
+(6) [undefined, undefined, undefined, undefined, undefined, undefined]0: undefined1: undefined2: undefined3: undefined4: undefined5: undefinedlength: 6[[Prototype]]: Array(0)
+var a=[1,2,3,4,56]
+undefined
+a.map((data)=>{return data*2})
+(5) [2, 4, 6, 8, 112]
+
+//filter
+var a=[1,2,3,4,5,6]
+a.filter((data)=>{return data>3})
+(3) [4, 5, 6]
+
