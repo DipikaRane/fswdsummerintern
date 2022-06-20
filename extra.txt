@@ -85,7 +85,21 @@ mongodb - https://www.mongodb.com/try/download/community
 //generating video url
 https://www.kapwing.com/resources/how-to-create-a-url-link-for-a-video/
 
+Assignment of JS
+1. Calculator must consist backspace button
+2. Coupons
 //use for coupon
 <script>
     window.onload=showdiv();
 </script>
+
+API calling
+API - Apllication Programming Interface
+
+///Backend///
+NodeJS 
+require npm -node pacakge manager
+1. nodejs must me installed in your system
+2. open terminal/cmd
+3. navigate to folder
+4. npm init
