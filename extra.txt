@@ -103,3 +103,14 @@ require npm -node pacakge manager
 2. open terminal/cmd
 3. navigate to folder
 4. npm init
+
+///pacakge.json///
+1.entry point to the node.
+2.contains metadata like name, description, version, keywords etc.
+3. scripts (start, test, build)
+4.packages/dependencies
+
+### steps  to install packages###
+1.open terminal/cmd
+2.navigate to folder
+3. npm i package_name
