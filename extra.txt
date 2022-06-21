@@ -114,3 +114,8 @@ require npm -node pacakge manager
 1.open terminal/cmd
 2.navigate to folder
 3. npm i package_name
+
+##window####
+1.open terminal/cmd
+2.navigate to folder
+3. npm i -g package_name
