@@ -115,7 +115,32 @@ require npm -node pacakge manager
 2.navigate to folder
 3. npm i package_name
 
-##window####
+##local dependencies##
+1. local to the folder
+2. used in the same folder
+3. do not need admin access to work/install
+
+##global dependencies##
+1.installed in your system
+2.used for any application.
+3.only those packages that helps to start, build, test applications.
+4. need admin access to work/install
+
+step to install global package
+##windows####
 1.open terminal/cmd
 2.navigate to folder
-3. npm i -g package_name
+3.npm i -g package_name
+
+##Linux/Mac####
+1.open terminal/cmd
+2.navigate to folder
+3.sudo npm i -g package_name
+
+##nodemon###
+npm i -g nodemon
+
+mongodb - database
+1. is not a sequal database
+2. save data in json format
+3. It helps to save unstructured data.
