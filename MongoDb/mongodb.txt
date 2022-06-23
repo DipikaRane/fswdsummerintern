@@ -1,0 +1,85 @@
+mongodb - database
+1. is not a sequal database
+2. save data in json format
+3. It helps to save unstructured data.
+
+example : database student
+| Roll No. | English | Hindi |  Computer |
+|   1      |    50   |       |     90    |
+|   2      |         |  80   |           |
+|   3      |    70   |       |     56    |
+|   4      |         |       |     66    |
+
+wasting spaces...
+ mongodb format 
+  [
+    {
+        roll no. : 1,
+        English : 50,
+        computer : 90
+    },
+    {
+        roll no. : 2,
+        Hindi : 80
+    },
+    {
+        roll no. :3,
+        English : 70,
+        Computer :65
+    },
+    {
+        roll no. : 4,
+        computer : 66
+    }
+  ]
+
+  terminologies
+  sql               nosql
+  database          database
+  table             collection
+  row               Document
+  select            find
+  insert/create     insert
+  UPDATE            UPDATE
+  delete            remove
+
+  ###local setup for mongodb##
+  >> Windows
+  1. download and install mongodb (https://www.mongodb.com/try/download/community)
+  2. create a folder by name "Data" in C drive
+  3. create a folder by name "db"
+
+  >>>Mac/Linux
+   1. download and install mongodb (https://www.mongodb.com/try/download/community)
+   2. go to root (~)
+   3. mkdir Data/db
+
+  ## step to start mongodb Server
+  >>> Windows
+1. open cmd
+2. go inside cd C:\Program Files\MongoDB\Server\5.0\bin
+3. type mongod
+4. it will start the server on a default port no:27017
+5. Don't close the cmd till you are using mongodb
+
+>>>Mac/Linux
+1. open cmd
+2. on cmd write  mongod --dbpath Data/db
+3. it will start the server on a default port no:27017
+4. Don't close the cmd till you are using mongodb
+
+##setup for client
+>>> Windows
+1. open new cmd
+2. go inside cd C:\Program Files\MongoDB\Server\5.0\bin
+3. type mongo
+4. It will start mongo client
+
+>>Mac/Linux
+1. open new cmd
+3. type mongo
+4. It will start mongo client
+
+//cloud setup
+1. select Atlas
+signup with mongodb

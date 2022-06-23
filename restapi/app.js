@@ -4,50 +4,6 @@ var app = express();
 var dotenv=require('dotenv');
 dotenv.config();
 
-var location=[
-    {
-        "location_id": 1,
-        "location_name": "New Delhi",
-        "state_id": 1,
-        "state": "Delhi",
-        "country_name": "India"
-    },
-    {
-        "location_id": 2,
-        "location_name": "Mumbai",
-        "state_id": 2,
-        "state": "Maharashtra",
-        "country_name": "India"
-    },
-    {
-        "location_id": 3,
-        "location_name": "Bhopal",
-        "state_id": 3,
-        "state": "Madhya Pradesh",
-        "country_name": "India"
-    },
-    {
-        "location_id": 4,
-        "location_name": "Jaipur",
-        "state_id": 4,
-        "state": "Rajsthan",
-        "country_name": "India"
-    },
-    {
-        "location_id": 5,
-        "location_name": "Chennai",
-        "state_id": 5,
-        "state": "Tamilnadu",
-        "country_name": "India"
-    },
-    {
-        "location_id": 6,
-        "location_name": "Bangalore",
-        "state_id": 6,
-        "state": "Karnataka",
-        "country_name": "India"
-    }
-]
 
 //first default route
 app.get('/',(req,res)=>{

@@ -1,0 +1,214 @@
+[
+    {
+        "id":1,
+        "Service":"Outpatient Department(OPD)",
+        "Description":"Consultaion & Check-Up By Best Doctors",
+        "image":"https://i.ibb.co/SKJgDZc/opd.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "Service":"General Surgery",
+        "Description":"Consultaion & Check-Up By Best Doctors",
+        "image":"https://i.ibb.co/c8Gr3Kf/general-surgery.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":3,
+        "Service":"Orthopedics & Traumatology",
+        "Description":"We provide Trained Staff at your service",
+        "image":"https://i.ibb.co/48B3KqH/orthopedics.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":4,
+        "Service":"Gastroentrology",
+        "Description":"Feel like home care taken here",
+        "image":"https://i.ibb.co/BgGdPbn/gastro.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":5,
+        "Service":"Neuropsychiatry",
+        "Description":"All Instruments handled by Technicians",
+        "image":"https://i.ibb.co/MpGC6PR/neuropsychiatry.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":6,
+        "Service":"Obstetrics & Gynecology",
+        "Description":"Zero Cash Assistance Available",
+        "image":"https://i.ibb.co/G2kKSpk/gynecology.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":6,
+        "Service":"Pediatrics",
+        "Description":"Ambulance available on call for 24 Hours",
+        "image":"https://i.ibb.co/gRkW4WB/pediatrics.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    }
+]

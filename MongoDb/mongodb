@@ -1,0 +1,30 @@
+* every command should run on mongo client
+
+* commands
+1. to see all database
+show dbs
+
+2. create database / use database
+use database_name    use fswdSummer
+
+3. to see collection in database
+show collections
+
+4. to create collection
+db.location.insert({location_id: 1,location_name: "New Delhi",state_id: 1,state: "Delhi",country_name: "India"})
+
+db.user.insert({_id:2,Name:"Nitin", City:"Nagpur"})
+db.user.insert({Name:"Vedanti", City:"Nagpur"})
+db.user.insert({Name:"Ashok", City:"Nagpur"})
+
+5. to see the data from collection
+db.collection_name.find()           db.user.find()
+
+6. to see data in proper format
+db.collection_name.find().pretty()      db.user.find().pretty()
+
+7. to update the data of collection
+db.user.update({Name:"Vedanti"},{$set:{City:"Pune"}})
+
+8. to delete the data from collection
+db.colection_name.remove({data})        db.user.remove({Name:"Nitin"})

@@ -1,0 +1,38 @@
+[
+    {
+        "Feature_id":1,
+        "Feature":"Reception & Help",
+        "Description":"Consultaion & Check-Up By Best Doctors",
+        "image":"https://i.ibb.co/cvKDMW1/service3.jpg"
+    },
+    {
+        "Feature_id":2,
+        "Feature":"Expert Doctors",
+        "Description":"We provide Trained Staff at your service",
+        "image":"https://i.ibb.co/KwQ6qgN/service2.jpg"
+    },
+    {
+        "Feature_id":3,
+        "Feature":"I.C.U.",
+        "Description":"Feel like home care taken here",
+        "image":"https://i.ibb.co/GsVXZKk/service4.jpg"
+    },
+    {
+        "Feature_id":4,
+        "Feature":"Medicine Help",
+        "Description":"Zero Cash Assistance Available",
+        "image":"https://i.ibb.co/0C1xshz/service5.jpg"
+    },
+    {
+        "Feature_id":5,
+        "Feature":"Diagnostics",
+        "Description":"All Instruments handled by Technicians",
+        "image":"https://i.ibb.co/SBVFKH8/service7.jpg"
+    },
+    {
+        "Feature_Feature_id":6,
+        "Feature":"Ambulance",
+        "Description":"Ambulance available on call for 24 Hours",
+        "image":"https://i.ibb.co/BGwbmKd/service6.jpg"
+    }
+]
