@@ -83,3 +83,11 @@ wasting spaces...
 //cloud setup
 1. select Atlas
 signup with mongodb
+
+params 
+1. we send after '/'
+2. cumpulsory to define
+
+queryparams
+1. we send after '?'
+2. no need to define
