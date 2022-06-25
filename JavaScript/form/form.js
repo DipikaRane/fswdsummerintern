@@ -57,6 +57,14 @@ var changeText=()=>{
     document.getElementsByClassName('experience')[0].innerText=`Total Years of Experience is ${expr}`
 }
 
-var validateCPwd=()=>{
-    
+var validateCPwd  = () => {
+    var pwd = document.getElementById('pwd').value;
+    var cpwd = document.getElementById('cpwd').value;
+    if(pwd !== cpwd){
+        document.getElementById('cpout').innerText="Password Does Not Match"
+        document.getElementById('cpwd').style.borderColor="red"
+    }else{
+        document.getElementById('cpout').innerText=""
+        document.getElementById('cpwd').style.borderColor="green"
+    }
 }

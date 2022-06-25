@@ -54,5 +54,8 @@ function clearAll(){
 }
 
 function backspace(){
-    
+    var a = document.getElementById('first').value;
+    a = a.replace(/ /g,'');
+    a = a.slice(0,-1)
+    document.getElementById('first').value=a
 }
