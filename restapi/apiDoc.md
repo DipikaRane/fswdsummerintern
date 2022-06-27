@@ -25,3 +25,23 @@ http://localhost:8425/services/4
 >>>features with features_id
 http://localhost:8425/features/Feature_id
 http://localhost:8425/features/2
+
+
+
+
+
+// app.delete('/deleteOrder',(req,res)=>{
+//     db.collection('orders').remove({_id:id},(err,result)=>{
+//         if(err) throw err;
+//         res.send(result);
+//     })
+// })
+
+// app.post('/serviceLocation',(req,res)=>{
+//     // console.log(req.body);
+//     // res.send(req.body)
+//     db.collection('services').find({location_id:{$in:req.body}}).toArray((err,result)=>{
+//         if(err) throw err;
+//         res.send(result)
+//     })
+// })

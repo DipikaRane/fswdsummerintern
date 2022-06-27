@@ -27,4 +27,5 @@ db.collection_name.find().pretty()      db.user.find().pretty()
 db.user.update({Name:"Vedanti"},{$set:{City:"Pune"}})
 
 8. to delete the data from collection
-db.colection_name.remove({data})        db.user.remove({Name:"Nitin"})
+db.colection_name.remove({id:id})        db.user.remove({Name:"Nitin"})
+db.features.remove({"Feature_Feature_id":6})

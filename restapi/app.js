@@ -1,13 +1,17 @@
 var express=require('express');
-var port = process.env.PORT || 8425
 var app = express();
 var dotenv=require('dotenv');
 var mongo=require('mongodb');
 var MongoClient=mongo.MongoClient;
 dotenv.config();
 const mongoUrl=process.env.MongoLiveUrl;
+const bodyParser=require('body-parser');
 
+var port = process.env.PORT || 8425
 var db;
+
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
 //first default route
 app.get('/',(req,res)=>{
@@ -47,8 +51,6 @@ app.get('/location/:id',(req,res)=>{
 
 app.get('/state/:id',(req,res)=>{
     var id=parseInt(req.params.id);
-    // console.log(id);
-    // res.send('ok')
     db.collection('location').find({"state_id":id}).toArray((err,result)=>{
         if(err) throw err;
         res.send(result)
@@ -66,7 +68,7 @@ app.get('/services/:id',(req,res)=>{
 })
 
 app.get('/features/:id',(req,res)=>{
-    var id=parseInt(req.params.id);
+    var id=Number(req.params.id);
     // console.log(id);
     // res.send('ok')
     db.collection('features').find({"Feature_id":id}).toArray((err,result)=>{
@@ -74,6 +76,39 @@ app.get('/features/:id',(req,res)=>{
         res.send(result)
     })
 })
+
+app.get('/appointment',(req,res)=>{
+    db.collection('orders').find().toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+// app.post('/placeorder',(req,res)=>{
+//     // console.log(req.body);
+//     // res.send('ok')
+//     db.collection('orders').insert(req.body,(err,result)=>{
+//         if(err) throw err;
+//         res.send("Order placed");
+//     })
+// })
+
+app.post('/postorder',(req,res)=>{
+    // console.log(req.body);
+    // res.send('ok')
+    db.collection('orders').insertMany(req.body,(err,result)=>{
+        if(err) throw err;
+        res.send("Appointment Booked");
+    })
+})
+
+app.delete('/deleteOrder',(req,res)=>{
+    db.collection('orders').remove({},(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
+
 
 //connect with mongodb 
 MongoClient.connect(mongoUrl,(err,client)=>{
