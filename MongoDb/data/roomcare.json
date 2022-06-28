@@ -1,0 +1,26 @@
+[
+    {
+        "room_id":1,
+        "room_type":"General",
+        "price":1000,
+        "number_of_patients":10
+    },
+    {
+        "room_id":2,
+        "room_type":"Semi-General",
+        "price":1200,
+        "number_of_patients":5
+    },
+    {
+        "room_id":3,
+        "room_type":"Private",
+        "price":1800,
+        "number_of_patients":1
+    },
+    {
+        "room_id":4,
+        "room_type":"Dual",
+        "price":1500,
+        "number_of_patients":2
+    }
+]

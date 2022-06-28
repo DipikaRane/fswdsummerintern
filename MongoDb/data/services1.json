@@ -2,7 +2,7 @@
     {
         "id":1,
         "Service":"Outpatient Department(OPD)",
-        "Description":"Consultaion & Check-Up By Best Doctors",
+        "Description":"Regular Consultaion & Check-Up By Best Doctors",
         "image":"https://i.ibb.co/SKJgDZc/opd.jpg",
         "location":[
             {
@@ -34,7 +34,7 @@
     {
         "id":2,
         "Service":"General Surgery",
-        "Description":"Consultaion & Check-Up By Best Doctors",
+        "Description":"General Surgeries with less expense and more care",
         "image":"https://i.ibb.co/c8Gr3Kf/general-surgery.jpg",
         "location":[
             {
@@ -66,7 +66,7 @@
     {
         "id":3,
         "Service":"Orthopedics & Traumatology",
-        "Description":"We provide Trained Staff at your service",
+        "Description":"Musculoskeletal Science & Orthopedics",
         "image":"https://i.ibb.co/48B3KqH/orthopedics.jpg",
         "location":[
             {
@@ -98,7 +98,7 @@
     {
         "id":4,
         "Service":"Gastroentrology",
-        "Description":"Feel like home care taken here",
+        "Description":"Gasrto-Intestinal Problem Solutions",
         "image":"https://i.ibb.co/BgGdPbn/gastro.jpg",
         "location":[
             {
@@ -130,7 +130,7 @@
     {
         "id":5,
         "Service":"Neuropsychiatry",
-        "Description":"All Instruments handled by Technicians",
+        "Description":"Brain Cures And Nerve Transplants",
         "image":"https://i.ibb.co/MpGC6PR/neuropsychiatry.jpg",
         "location":[
             {
@@ -154,7 +154,7 @@
     {
         "id":6,
         "Service":"Obstetrics & Gynecology",
-        "Description":"Zero Cash Assistance Available",
+        "Description":"Gynecology and Uterus Care",
         "image":"https://i.ibb.co/G2kKSpk/gynecology.jpg",
         "location":[
             {
@@ -180,9 +180,9 @@
         ]
     },
     {
-        "id":6,
+        "id":7,
         "Service":"Pediatrics",
-        "Description":"Ambulance available on call for 24 Hours",
+        "Description":"Kids Care And New Born Care",
         "image":"https://i.ibb.co/gRkW4WB/pediatrics.jpg",
         "location":[
             {
@@ -200,6 +200,82 @@
             {
                 "location_id": 4,
                 "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            }
+        ]
+    },
+    {
+        "id":8,
+        "Service":"Urology",
+        "Description":"Nephology and Renal Transplantation",
+        "image":"https://i.ibb.co/55545Rk/kideny.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 5,
+                "location_name": "Chennai"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":9,
+        "Service":"Transplant Medicine",
+        "Description":"transplant of Heart, Lung, Liver",
+        "image":"https://i.ibb.co/f9wMRB0/heart-Transplant.jpg",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
+            },
+            {
+                "location_id": 3,
+                "location_name": "Bhopal"
+            },
+            {
+                "location_id": 4,
+                "location_name": "Jaipur"
+            },
+            {
+                "location_id": 6,
+                "location_name": "Bangalore"
+            }
+        ]
+    },
+    {
+        "id":10,
+        "Service":"Cancer Care",
+        "Description":"Cancer Care Treatments with Radiation Therapy",
+        "image":"https://i.ibb.co/ssXBHDs/cancer.webp",
+        "location":[
+            {
+                "location_id": 1,
+                "location_name": "New Delhi"
+            },
+            {
+                "location_id": 2,
+                "location_name": "Mumbai"
             },
             {
                 "location_id": 5,

@@ -29,3 +29,33 @@ db.user.update({Name:"Vedanti"},{$set:{City:"Pune"}})
 8. to delete the data from collection
 db.colection_name.remove({id:id})        db.user.remove({Name:"Nitin"})
 db.features.remove({"Feature_Feature_id":6})
+
+9.projection>>>> display the selected data for particular id
+db.collection_name.find({condition},{projection})
+
+db.services.find({id:10},{Service:1,Description:1,_id:0}).pretty()
+
+> db.services.find({id:10},{Service:1,Description:1}).pretty()
+{
+        "_id" : ObjectId("62ba968c29df03ec50052a88"),
+        "Service" : "Cancer Care",
+        "Description" : "Cancer Care Treatments with Radiation Therapy"
+}
+> db.services.find({id:10},{Service:1,Description:1,_id:0}).pretty()
+{
+        "Service" : "Cancer Care",
+        "Description" : "Cancer Care Treatments with Radiation Therapy"
+}
+
+db.collection_name.find({},{projection})
+db.services.find({},{Service:1,Description:1,_id:0}).pretty()
+
+db.services.find({"location.location_id":1},{Service:1,Description:1,_id:0}).pretty()
+
+>>>count
+db.services.count({"location.location_id":4})
+7
+> db.services.count({"location.location_id":5})
+10
+> db.services.count({"location.location_id":3})
+8

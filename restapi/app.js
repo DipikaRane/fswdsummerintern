@@ -96,7 +96,7 @@ app.get('/appointment',(req,res)=>{
 app.post('/postorder',(req,res)=>{
     // console.log(req.body);
     // res.send('ok')
-    db.collection('orders').insertMany(req.body,(err,result)=>{
+    db.collection('orders').insert(req.body,(err,result)=>{
         if(err) throw err;
         res.send("Appointment Booked");
     })
@@ -109,7 +109,39 @@ app.delete('/deleteOrder',(req,res)=>{
     })
 })
 
+app.delete('/deleteOrder/:id',(req,res)=>{
+    var id=Number(req.params.id)
+    db.collection('orders').remove({id:id},(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
 
+app.post('/serviceArray',(req,res)=>{
+    // console.log(req.body);
+    // res.send(req.body)
+    db.collection('services').find({id:{$in:req.body}}).toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+app.put('/updateStatus/:id',(req,res)=>{
+    var id=Number(req.params.id)
+    var status=req.body.status?req.body.status:"Booked"
+    db.collection('orders').updateOne(
+        {id:id},
+        {
+            $set:{
+                "date":req.body.date,
+                "Bank":req.body.Bank,
+                "bank_status":req.body.bank_status,
+                "status":status
+            }
+        }
+    )
+    res.send("Data updated")
+})
 //connect with mongodb 
 MongoClient.connect(mongoUrl,(err,client)=>{
     if(err) console.log("Error while Connection");
