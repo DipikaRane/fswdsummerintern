@@ -140,3 +140,14 @@ step to install global package
 ##nodemon###
 npm i -g nodemon
 
+>>>>>React framework>>>>>
+1. node must be installed in system
+2. to install react >>>
+## 1. npm create-react-app
+## 2. npx create-react-app app_name
+
+###to start react-app
+npm start or yarn start
+
+default port of react
+http://localhost:3000/

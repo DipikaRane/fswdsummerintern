@@ -18,6 +18,7 @@ app.get('/',(req,res)=>{
     res.send("Hii From Express")
 })
 
+
 app.get('/location',(req,res)=>{
     db.collection('location').find().toArray((err,result)=>{
         if(err) throw err
@@ -49,10 +50,24 @@ app.get('/location/:id',(req,res)=>{
     })
 })
 
-app.get('/state/:id',(req,res)=>{
-    var id=parseInt(req.params.id);
-    db.collection('location').find({"state_id":id}).toArray((err,result)=>{
-        if(err) throw err;
+// app.get('/state/:id',(req,res)=>{
+//     var id=parseInt(req.params.id);
+//     db.collection('location').find({"state_id":id}).toArray((err,result)=>{
+//         if(err) throw err;
+//         res.send(result)
+//     })
+// })
+
+//query param example
+//city with respect to state_id
+app.get('/city',(req,res)=>{
+    var query={};
+    //console.log(req.query.city);
+    if(req.query.city && req.query.feature){
+        query={state_id:Number(req.query.city),"feature.feature_id":Number(req.query.feature)}
+    }
+    db.collection('location').find(query).toArray((err,result)=>{
+        if(err) throw err
         res.send(result)
     })
 })
@@ -142,11 +157,35 @@ app.put('/updateStatus/:id',(req,res)=>{
     )
     res.send("Data updated")
 })
+
+
 //connect with mongodb 
 MongoClient.connect(mongoUrl,(err,client)=>{
     if(err) console.log("Error while Connection");
     db=client.db('HospitalData');
     app.listen(port,()=>{
         console.log(`listening on port ${port}`)
+    })
+})
+
+app.get('/costfilter/:mealId',(req,res)=>{
+    var id=Number(req.params.mealId)
+    var query={"mealTypes.mealtype_id":id}
+
+    if(req.query.cuisine && req.query.lcost && req.query.hcost){
+        let lcost=Number(req.query.lcost)
+        let hcost=Number(req.query.hcost)
+        query={$and:[{cost:{$gt:lcost, $lt:hcost}}],"mealTypes.mealtype_id":id,
+                "cuisines.cuisine_id":Number(req.query.cuisine)}
+        // query={"mealTypes.mealtype_id":id,"cuisines.cuisine_id":{$in:[2,5]}}
+    }else if(req.query.lcost && req.query.hcost){
+        let lcost=Number(req.query.lcost)
+        let hcost=Number(req.query.hcost)
+
+        query={$and:[{cost:{$gt:lcost, $lt:hcost}}],"mealTypes.mealtype_id":id}
+    }
+    db.collection('restdata').find(query).toArray((err,result)=>{
+        if(err) throw err
+        res.send(result)
     })
 })

@@ -14,9 +14,16 @@ Using params
 http://localhost:8425/location/location_id  
 http://localhost:8425/location/2
 
->>>state with state_id
+<!-- >>>state with state_id
 http://localhost:8425/state/state_id
-http://localhost:8425/state/3
+http://localhost:8425/state/3 -->
+
+Using query params
+>>>city wrt state_id
+http://localhost:8421/city?city=1
+
+and features 
+http://localhost:8421/city?city=1&feature=4
 
 >>>services with services_id
 http://localhost:8425/services/id
