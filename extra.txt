@@ -140,6 +140,14 @@ step to install global package
 ##nodemon###
 npm i -g nodemon
 
+>>>making url/api live
+1. create one folder having app.js, package.json, package-lock.json
+2. make sure mongoURL must be Live
+3 create one repository, initalize it.. push your code to the repository.
+4. go to heroku.com
+https://id.heroku.com/login
+
+
 >>>>>React framework>>>>>
 1. node must be installed in system
 2. to install react >>>
@@ -151,3 +159,8 @@ npm start or yarn start
 
 default port of react
 http://localhost:3000/
+
+three things 
+1. react - this is the main package
+2. react-dom -: this package  helps to build JS with html
+3. react-scripts  -: this helps to run the application

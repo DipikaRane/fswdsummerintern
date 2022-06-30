@@ -1,13 +1,15 @@
 1. Home page (page 1)
 >>>features
 http://localhost:8425/features
+https://fswdsummernodeapi.herokuapp.com/features
 
 >>>location
 http://localhost:8425/location
+https://fswdsummernodeapi.herokuapp.com/location
 
 >>services
 http://localhost:8425/services
-
+https://fswdsummernodeapi.herokuapp.com/services
 
 Using params
 >>>location with location_id
