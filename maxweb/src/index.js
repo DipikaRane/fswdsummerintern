@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Home from './Component/Home/Home';
 
 const App =()=>{
     return(
-        <h1>Hi from react</h1>
+        <>               
+        <Home/>
+        </>
     )
 }
 

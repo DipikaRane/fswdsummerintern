@@ -164,3 +164,23 @@ three things
 1. react - this is the main package
 2. react-dom -: this package  helps to build JS with html
 3. react-scripts  -: this helps to run the application
+
+>>>React Component>>>
+1. function component -- dumb component used only for display purposes
+2. class component -- logical component, can call the API.
+3. hooks component -- used in both class and component.
+
+##state & props##
+
+state -- state acts local component
+        every component have its own state
+        scope of state is single component
+        we can update the value of state i.e mutable.
+
+props -- helps to transfer the data between components
+        we can transfer the data between nested components
+        we cannot change the value of props (directly) i.e immutable
+
+### constructor###
+-- its a keywords
+-- first thing that get called inside class
