@@ -3,6 +3,7 @@ import React,{ Component, Fragment} from 'react';
 
 class Head extends Component{
     constructor(props) {
+        console.log(">>>Inside Constructor")
         super(props);
         this.state={
             title:'Techvanto Academy',
@@ -10,10 +11,13 @@ class Head extends Component{
         }
     }
     handleChange=(event)=>{
-        console.log(event.target.value)
-        this.setState({text:event.target.value})
+        // console.log(event.target.value)
+        this.setState({text:event.target.value?event.target.value:"User Input Here"})
+        this.props.userInput(event.target.value)
     }
+
     render(){
+        console.log(">>>Inside render")
         const myStyle={
             logo:{
                 fontSize:'40px',
@@ -26,7 +30,7 @@ class Head extends Component{
         }
         return(
             <Fragment>
-                <header style={myStyle.header}>
+                <header style={myStyle.header} >
                 <div style={myStyle.logo}>{this.state.title}</div>
                 <center>
                     <input onChange={this.handleChange}/>
