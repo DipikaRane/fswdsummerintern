@@ -60,13 +60,13 @@ span{
 .card{
     display: inline-block;
     margin:2%;
-    width:300px;
+    width:250px;
     height:370px;
     border:1px solid black;
     box-shadow: 2px 2px 2px black;
 }
 .card-image{
-    width:300px;
+    width:250px;
     height:200px;
 }
 .card-image>img{

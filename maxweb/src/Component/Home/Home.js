@@ -1,30 +1,18 @@
-import React,{ Component} from 'react';
-import Head from '../Head';
-import Footer from '../Footer';
-import './Home.css'
-import JSON from '../data.json'
-import Product from './ProductDisplay'
+import React,{Component} from 'react';
+
 class Home extends Component {
-    constructor(){
-        super()
-        this.state={
-            product:JSON,
-            filtered:JSON
-        }
-    }
-        filterProduct=(userText)=>{
-        const output=this.state.product.filter((data)=>{
-            return data.product_name.toLowerCase().indexOf(userText.toLowerCase())>-1
-        })
-        this.setState({filtered:output})
-    }
     render(){
         return(
             <>
-            <Head userInput={(data)=>{this.filterProduct(data)}}/>
-            <Product prodData={this.state.filtered}/>
-            <Footer year="2022" month="July"/>
-            </>
+            <div className="panel panel-warning" style={{width:'70%',marginLeft:'15%'}}>
+            <div className="panel-heading">
+                <h2>Home</h2>
+            </div>
+            <div className="panel-body">
+                <p>Home is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>        
+        </div>
+        </> 
         )
     }
 }

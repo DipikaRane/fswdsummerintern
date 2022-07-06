@@ -1,65 +1,28 @@
-import React,{ Component, Fragment} from 'react';
-//import { Component, Fragment} from 'react';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-class Head extends Component{
-    constructor(props) {
-        console.log(">>>Inside Constructor")
-        super(props);
-        this.state={
-            title:'Techvanto Academy',
-            text:'User Input Here'
-        }
-    }
-    handleChange=(event)=>{
-        // console.log(event.target.value)
-        this.setState({text:event.target.value?event.target.value:"User Input Here"})
-        this.props.userInput(event.target.value)
-    }
-
+class Head extends React.Component {
     render(){
-        console.log(">>>Inside render")
-        const myStyle={
-            logo:{
-                fontSize:'40px',
-                color:'white',
-                textAlign:'center'
-            },
-            header:{
-                backgroundColor:'#007a80'
-            }
-        }
         return(
-            <Fragment>
-                <header style={myStyle.header} >
-                <div style={myStyle.logo}>{this.state.title}</div>
+            <>
                 <center>
-                    <input onChange={this.handleChange}/>
-                    <div style={{color:'purple',fontSize:'20px'}}>
-                        {this.state.text}
+                <nav className="navbar navbar-inverse" style={{width:'70%'}}>
+                    <div className="container-fluid">
+                        <div className="navbar-header">
+                        <Link className="navbar-brand" to="/">Techvanto</Link>
+                        </div>
+                        <ul className="nav navbar-nav">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/post">Post</Link></li>
+                        <li><Link to="/profile">Profile</Link></li>
+                        </ul>
                     </div>
+                </nav>
+                    <h1>Techvanto Academy</h1>
                 </center>
-                </header>
-            </Fragment>
+                <hr/>
+            </>
         )
     }
 }
 export default Head
-
-
-// const Header =()=>{
-//     return(
-//         <>
-//         <h1>Techvanto Academy</h1>
-//         </>
-//     )
-// }
-
-// class Header extends React.Component{
-//     render(){
-//         return(
-//             <React.Fragment>
-//             <h1>Techvanto Academy</h1>
-//             </React.Fragment>
-//         )
-//     }
-// }

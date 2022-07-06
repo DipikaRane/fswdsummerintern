@@ -1,13 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Component/Home/Home';
+import Routing from './Component/Routing';
 
-const App =()=>{
-    return(
-        <>               
-        <Home/>
-        </>
-    )
-}
-
-ReactDOM.render(<App/>,document.getElementById('root'))
+ReactDOM.render(<Routing/>,document.getElementById('root'))
