@@ -142,6 +142,13 @@ app.post('/serviceArray',(req,res)=>{
         res.send(result)
     })
 })
+app.get('/filter/:locId',(req,res)=>{
+    var id=Number(req.params.locId);
+    db.collection('services').find({"location.location_id":id}).toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
 
 app.put('/updateStatus/:id',(req,res)=>{
     var id=Number(req.params.id)

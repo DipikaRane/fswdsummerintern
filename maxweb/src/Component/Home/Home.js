@@ -1,6 +1,30 @@
 import React,{Component} from 'react';
 
+const locUrl="https://fswdsummernodeapi.herokuapp.com/location";
 class Home extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            location:''
+        }
+    }
+    // componentDidMount(){
+    //     alert("This is home")
+    // }
+    // componentDidUpdate(){
+    //     alert("This is update")
+    // }
+    renderCity=(data)=>{      
+        if(data){
+            return data.map((item)=>{
+                return(
+                    <option key={item.location_id}>
+                        {item.location_name}
+                    </option>
+                )
+            })
+        }
+    }
     render(){
         return(
             <>
@@ -9,11 +33,22 @@ class Home extends Component {
                 <h2>Home</h2>
             </div>
             <div className="panel-body">
-                <p>Home is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <select className="form-control">
+                    <option>----Select City----</option>
+                    {this.renderCity(this.state.location)}
+                </select>
             </div>        
         </div>
         </> 
         )
+    }
+    componentDidMount(){
+        console.log(">>Inside CompoentDidMount")
+        fetch(locUrl,{method:'GET'})
+        .then((res)=>res.json())
+        .then((data)=>{
+            this.setState({location:data})
+        })
     }
 }
 export default Home

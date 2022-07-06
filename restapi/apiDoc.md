@@ -10,6 +10,7 @@ https://fswdsummernodeapi.herokuapp.com/location
 >>services
 http://localhost:8425/services
 https://fswdsummernodeapi.herokuapp.com/services
+https://fswdsummernodeapi.herokuapp.com/filter/2
 
 Using params
 >>>location with location_id

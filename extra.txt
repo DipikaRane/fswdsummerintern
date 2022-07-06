@@ -185,7 +185,7 @@ props -- helps to transfer the data between components
 -- its a keywords
 -- first thing that get called inside class
 
-### routing###
+### Routing###
 needs react-router to be installed 
 install latest version
 npm i react-router-dom@5.3.0
@@ -194,3 +194,8 @@ npm i react-router-dom@5.3.0
 History -- redirection
 Location -- for queryparams
 Match -- for params
+
+###component methods###
+componentDidMount() -- mounts the data from API on page load
+componentDidUpdate() -- update the data when state update
+componentWillUnmount() -- unmounts the data

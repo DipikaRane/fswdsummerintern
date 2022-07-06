@@ -1,0 +1,63 @@
+#main{
+    max-height: 400px;
+    color:white;
+    /* background-color:skyblue; */
+}
+.max-img{
+    height:400px;
+    width:100%;
+    background-image:url('https://i.ibb.co/vJSbn75/max-hospital.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+}
+.heading{
+    width:80%;
+    display: inline-block;
+    color:white;
+    margin-left:5%;
+    /* margin-top:2% */
+}
+.emergency{
+    /* display: inline-block; */
+    height:210px;
+    width:16px;
+    font-size:15px;
+    color:white;
+    background-color: red;
+    /* margin-top:-5%; */
+}
+span{
+    display: inline-block;
+}
+.fad{
+    display: inline-block;
+    margin-left:5%;
+    margin-top:2%;
+}
+.btn-primary{
+    width:150px;
+    height:60px;
+    /* border-radius:12px; */
+    background-color: #007294;
+    border-color:#007294;
+}
+.map{
+    margin-top:-11%;
+    margin-left:5%;
+    color:white;
+}
+.map>p{
+    font-size:25px;
+}
+.direct{
+    color: #f1f2f5;
+    text-decoration: none;
+}
+.direct:hover{
+    color: #f1f2f5;
+}
+.panel{
+    width:200px;
+    height:200px;
+}
