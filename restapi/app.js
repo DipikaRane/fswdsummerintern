@@ -7,7 +7,6 @@ dotenv.config();
 const mongoUrl=process.env.MongoLiveUrl;
 var cors=require('cors');
 const bodyParser=require('body-parser');
-
 var port = process.env.PORT || 8425
 var db;
 

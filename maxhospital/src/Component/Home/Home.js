@@ -19,21 +19,6 @@ const Home =()=>{
                     <div className="emergency" data-toggle="modal" data-target="#Contact">
                         <span>E</span><span>M</span><span>E</span><span>R</span><span>G</span><span>E</span>
                         <span>N</span><span>C</span><span>Y</span>
-                        <div id="Contact" className="modal" role="dialog">
-                            <div className="modal-dialog">
-                                <div className="modal-content">    
-                                    <button type="button" className="close" data-dismiss="modal">&times;</button>
-                                        <center><h3>Love Handi-Crafts.Com</h3></center>
-                                            <div className="modal-body">
-                                                <div id="about">
-                                                    <span>&hearts;Love Handi-crafts.com is a website who provides you different kind of souveniors on your doorstep. Here you can see, 
-                                                    choose and buy all you like for your home, garden, office etc. 
-                                                    Also you will find the website is best place to buy gifts for your loved ones.&hearts;</span>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                        </div>
                     </div>
                     <div className="map">
                         <p><span className="direct">Get Directions
