@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-
+import {Link} from 'react-router-dom'
 const Home =()=>{
 
     return(
@@ -26,7 +26,7 @@ const Home =()=>{
                         <span className="direct">Contact Us</span></p>
                     </div>
                     <div className="fad">
-                        <button className="btn btn-primary" type="button" style={{fontSize:"20px"}}>Find a Doctor</button>
+                    <Link to='/doctor'><button className="btn btn-primary" type="button" style={{fontSize:"20px"}}>Find a Doctor</button></Link>
       </div>
                 </div>
         </div>

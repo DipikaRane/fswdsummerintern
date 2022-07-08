@@ -10,7 +10,7 @@ const Header=()=>{
                     <ul className="nav navbar-nav">
                         <li className="nav-item"><Link to='/' style={{color:"white"}}>MAX HOSPITAL</Link></li>
                         <li className="nav-item">
-                        <a href="#hospitals" style={{color:"white"}}>Find a Doctor</a>
+                        <Link to='/doctor' style={{color:"white"}}>Find a Doctor</Link>
                         </li>
                         <li className="nav-item" >
                         <Link to="/feature" style={{color:"white"}}>Features</Link>

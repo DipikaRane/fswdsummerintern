@@ -1,0 +1,11 @@
+#booking{
+    width:100%;
+}
+.profile{
+    display: inline-block;
+    width:30%;
+}
+.booking-info{
+    display: inline-block;
+    width:65%;
+}
