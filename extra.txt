@@ -199,3 +199,43 @@ Match -- for params
 componentDidMount() -- mounts the data from API on page load
 componentDidUpdate() -- update the data when state update
 componentWillUnmount() -- unmounts the data
+
+
+###Storage###
+three kinds of storage
+1. localStorages -- persistent storage
+---saves the data with respect to browser
+--- need to be removed manually
+
+2.sessionStorages -- non-persistent storage
+-- saves the data/info with respect Tab
+-- removes  automatically when the browser closed
+
+3.cookies -- saves the info with respect to website
+         ---- it has some expiry time, after that time info/cookies will be removed automatically
+
+
+methods to use localStorage>>>>>>>>
+1. localStorage.setItem('key','value')
+2. localStorage.getItem('key')
+3. localStorage.removeItem('key')
+
+methods to use sessionStorage>>>>>>>>
+1. sessionStorage.setItem('key','value')
+2. sessionStorage.getItem('key')
+3. sessionStorage.removeItem('key')
+
+localStorage.setItem('Token','Deepika')
+undefined
+localStorage.getItem('Token')
+'Deepika'
+localStorage.removeItem('Token')
+undefined
+sessionStorage.setItem('MyToken','Techvanto')
+undefined
+sessionStorage.getItem('MyToken')
+'Techvanto'
+sessionStorage.removeItem('MyToken')
+
+methods to use Cookies>>>>>>>>
+document.cookies="user=admin; expiry=Mon 12July 2022 14:34:00 UTC"

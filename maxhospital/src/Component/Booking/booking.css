@@ -2,10 +2,18 @@
     width:100%;
 }
 .profile{
+    width:25%;
     display: inline-block;
-    width:30%;
+    margin-left:7%;
 }
 .booking-info{
-    display: inline-block;
-    width:65%;
+    float:right;
+    margin-top:1%;
+    margin-right:8%;
+    width:55%;
+    /* display: inline-block; */
+}
+.panel-success{
+    width:90%;
+    height:530px;
 }

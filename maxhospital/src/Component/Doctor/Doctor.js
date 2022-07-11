@@ -27,7 +27,7 @@ class Doctor extends Component {
                                 <h3>{item.Specialty}</h3>
                                 <h4>{item.Degree}</h4>
                             </div>
-                            <Link to={`/book`}>
+                            <Link to={`/book/${item._id}`}>
                             <button className="btn btn-info">Book Appointment</button>
                             </Link>
                         </center>

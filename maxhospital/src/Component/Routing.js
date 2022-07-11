@@ -18,7 +18,7 @@ const Routing=()=>{
         <Route path="/contact" component={Contact}/>
         <Route path="/service" component={Services}/>
         <Route path="/doctor" component={Doctor}/>
-        <Route path="/book" component={Booking}/>
+        <Route path="/book/:id" component={Booking}/>
         </BrowserRouter>
     )
     
