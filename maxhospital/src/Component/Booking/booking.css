@@ -8,12 +8,23 @@
 }
 .booking-info{
     float:right;
-    margin-top:1%;
-    margin-right:8%;
-    width:55%;
+    /* display: inline-block; */
+    width:50%;
+    margin-top:25px;
+    margin-right:7%;
+    
     /* display: inline-block; */
 }
-.panel-success{
-    width:90%;
+.panel-danger{
+    width:100%;
     height:530px;
+}
+@media scree and(max-width:576){
+    .profile{
+        width:100%;
+    }
+    .booking-info{
+        margin-top:20%;
+        margin-left:20%;
+    }
 }

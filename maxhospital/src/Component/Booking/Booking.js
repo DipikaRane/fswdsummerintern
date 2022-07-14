@@ -33,13 +33,25 @@ class Booking extends Component {
             })
         }
     }
-    handleDept=(event)=>{
+    handleCity=(event)=>{
         console.log(event.target.value)
         fetch(`${filterUrl}${event.target.value}`,{method:'GET'})
         .then((res)=>res.json())
         .then((data)=>{
             this.setState({department:data})
         })
+        const Index=event.nativeEvent.target.selectedIndex;
+        console.log(event.nativeEvent.target[Index].text)
+        if(event.target.name==="city"){
+            this.setState({city:event.nativeEvent.target[Index].text})
+        }
+    }
+    onChange=(event)=>{
+        const Index=event.nativeEvent.target.selectedIndex;
+        console.log(event.nativeEvent.target[Index].text)
+        if(event.target.name==="dept"){
+            this.setState({dept:event.nativeEvent.target[Index].text})
+        }
     }
     renderDept=(data)=>{
         if(data){
@@ -69,20 +81,21 @@ class Booking extends Component {
     handleSubmit=()=>{
         console.log(this.state.pname)
         sessionStorage.setItem('pid',this.state.pid);
-        // sessionStorage.setItem('location',this.state.location[0]);
-        // sessionStorage.setItem('local',this.state.local.Service);
+        sessionStorage.setItem('city',this.state.city);
         sessionStorage.setItem('pname',this.state.pname);
         sessionStorage.setItem('email',this.state.email);
         sessionStorage.setItem('mobnum',this.state.mobnum);
         sessionStorage.setItem('reason',this.state.reason);
         sessionStorage.setItem('doctor',this.state.doctor.doctor_name);
+        sessionStorage.setItem('dept',this.state.dept);
     }
     render(){
-        let{doctor}=this.state
+        // console.log(this.state)
+        let{doctor}=this.state;
         return(
             <div id="booking">
                 <div className="profile">
-                    <h1>Profile</h1>
+                    {/* <center><h2>Profile</h2></center> */}
                     <div className="card">
                     <div className="card-image">
                         <img src={doctor.docimage} alt=""/>
@@ -99,41 +112,43 @@ class Booking extends Component {
                     </div>
                 </div>
                 <div className="booking-info">
-                <div className="panel panel-success">
-                <div className="panel-heading">
-                    <h2>Contact Us</h2>
-                </div>
-                <div className="panel-body">
+                    <div className="panel panel-danger">
+                        <div className="panel-heading">
+                            <center><h2>Book Appointment</h2></center>
+                        </div>
+                    <div className="panel-body">
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 <div className="form-group">
                                     <label>Patient Id</label>
-                                    <input type="text" className="form-control" name="pid" value={`MAX${this.state.pid}`} disabled/>
+                                    <input className="form-control" type="text" name="pid" value={`MAX${this.state.pid}`} disabled/>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                                <div className="form-group">
+                                    <label>Doctor</label>
+                                    <input className="form-control" type="text" name="docname" value={doctor.doctor_name} disabled/>                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                                <div className="form-group">
+                                    <label>Location / City</label>
+                                    <div id="dropdown">
+                                        <select  onChange={this.handleCity} className="form-control" name="city">
+                                            <option >-----Select City-----</option>
+                                            {this.renderCity(this.state.location)}
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 <div className="form-group">
                                     <label>Department</label>
-                                    <select  className="form-control" onChange={this.handleChange} name="local">
-                                        <option>-------Select Department-------</option>
-                                        {this.renderDept(this.state.department)}
-                                    </select>                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-12">
-                                <div className="form-group">
-                                    <label>Patient Name</label>
-                                    <input type="text" className="form-control" name="pname" onChange={this.handleChange}/>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12">
-                                <div className="form-group">
-                                    <label>Location / City</label>
-                                    <select onChange={this.handleDept} className="form-control" name="location">
-                                        <option>-----Selct City-----</option>
-                                        {this.renderCity(this.state.location)}
+                                    <select className="form-control" onChange={this.onChange} name="dept">
+                                            <option>-----Select Department-----</option>
+                                    {this.renderDept(this.state.department)} 
                                     </select>
                                 </div>
                             </div>
@@ -141,14 +156,14 @@ class Booking extends Component {
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 <div className="form-group">
-                                    <label>Doctor</label>
-                                    <input type="text" className="form-control" name="docname" value={doctor.doctor_name} disabled/>
+                                    <label>Patient Name</label>
+                                    <input type="text" className="form-control" name="pname" value={doctor.pname} onChange={this.handleChange} />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 <div className="form-group">
-                                    <label>Reason of Appointment</label>
-                                    <input className="form-control" type="text" name="reason" onChange={this.handleChange}/>
+                                    <label>Reason for Appointment</label>
+                                    <input type="text" className="form-control" name="reason" onChange={this.handleChange}/>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +171,7 @@ class Booking extends Component {
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 <div className="form-group">
                                     <label>Email Id</label>
-                                    <input type="email" className="form-control" name="email" onChange={this.handleChange} />
+                                    <input type="email" className="form-control" name="email" onChange={this.handleChange}/>
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
@@ -167,17 +182,15 @@ class Booking extends Component {
                             </div>
                         </div>
                         <center>
-                        <div className="col-lg-12" style={{marginTop:'3%'}}>
-                            <Link to='/view'><button className="btn btn-danger" style={{width:'200px'}}
-                            onClick={this.handleSubmit}>Book</button></Link>
-                        </div>
+                            <div className="col-lg-12" style={{marginTop:'3%'}}>
+                                <Link to='/view'><button type="submit" className="btn btn-danger" style={{width:'150px',fontSize:'20px'}} 
+                                onClick={this.handleSubmit}>Proceed</button></Link>
+                            </div>
                         </center>
+                    </div>
                 </div>
-                </div>
-                </div>
-                
+                </div>                                 
             </div>
-            
         )
     }
     async componentDidMount(){

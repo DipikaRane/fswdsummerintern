@@ -1,6 +1,8 @@
 import React from 'react';
-import './viewbooking.css'
+import './viewbooking.css';
+import {Link} from 'react-router-dom';
 
+const bookUrl="https://fswdsummernodeapi.herokuapp.com/postorder";
 class ViewBooking extends React.Component{
     constructor(props){
         super(props)
@@ -8,17 +10,107 @@ class ViewBooking extends React.Component{
 
         }
     }
-    handleSubmit=()=>{}
+    handleSubmit=()=>{
+        var obj=this.state;
+        console.log(obj)
+        fetch(bookUrl,{
+            method:'POST',
+            headers:{
+                'accept':'application/json',
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(obj)
+        })
+        .then('/appoint')
+        // .then(console.log('Appointment Booked'))
+    }
     render(){
         return(
             <div id="view-container">
-                <h1>View Booking</h1>
-                <h3>{this.state.pid}</h3>
-                <h3>{this.state.pname}</h3>
-                <h3>{this.state.doctor}</h3>
-                <h3>{this.state.mobnum}</h3>
-                <h3>{this.state.email}</h3>
-                <button className="btn btn-warning" onSubmit={this.handleSubmit}>Submit</button>
+                        <div className="panel panel-info">
+                            <div className="panel-heading">
+                                <center><h2>Confirm Appointment</h2></center>
+                            </div>
+                        <div className="panel-body">
+                            <div className="row">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Patient Id</label>
+                                        <input className="form-control" type="text" name="pid" value={`MAX${this.state.pid}`} disabled/>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Doctor</label>
+                                        <input className="form-control" type="text" name="docname" value={this.state.doctor} disabled/>                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Location / City</label>
+                                        <input className="form-control" value={this.state.city}/>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Department</label>
+                                        <input className="form-control" value={this.state.dept}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Patient Name</label>
+                                        <input type="text" className="form-control" name="pname" value={this.state.pname} />
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Reason for Appointment</label>
+                                        <input type="text" className="form-control" name="reason" value={this.state.reason}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Email Id</label>
+                                        <input type="email" className="form-control" name="email" value={this.state.email}/>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Contact No.</label>
+                                        <input type="text" className="form-control" name="mobnum" value={this.state.mobnum}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Date of Appointment</label>
+                                        <input type="date" className="form-control" name="date" onChange={this.onChange} required/>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                    <div className="form-group">
+                                        <label>Fees / Charges</label>
+                                        <input type="text" className="form-control" name="fees" value={this.state.amount} disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                            <center>
+                                <div className="col-lg-12" style={{marginTop:'3%'}}>
+                                 <Link to="/appoint">   <button type="button" className="btn btn-info" style={{width:'150px',fontSize:'20px'}} 
+                                   onClick={this.handleSubmit}>Book Appointment</button>
+                                
+                                </Link></div>
+                            </center>
+                        </div>
+                    </div>
             </div>
         )
     }
@@ -29,7 +121,9 @@ class ViewBooking extends React.Component{
             doctor:sessionStorage.getItem('doctor'),
             email:sessionStorage.getItem('email'),
             mobnum:sessionStorage.getItem('mobnum'),
-            reason:sessionStorage.getItem('reason')
+            reason:sessionStorage.getItem('reason'),
+            city:sessionStorage.getItem('city'),
+            dept:sessionStorage.getItem('dept')
         })
     }
 }
