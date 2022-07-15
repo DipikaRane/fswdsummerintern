@@ -7,8 +7,16 @@ class ViewBooking extends React.Component{
     constructor(props){
         super(props)
         this.state={
-
+            amount:1000,
+            date:'',
         }
+    }
+    onChange=(event)=>{
+        console.log(event.target.value)
+        if(event.target.name==="date"){
+            this.setState({date:event.target.value})
+        }
+        sessionStorage.setItem('date',this.state.date)
     }
     handleSubmit=()=>{
         var obj=this.state;
@@ -21,8 +29,8 @@ class ViewBooking extends React.Component{
             },
             body:JSON.stringify(obj)
         })
-        .then('/appoint')
-        // .then(console.log('Appointment Booked'))
+         .then(this.props.history.push('/booking'))
+// .then(console.log('Appointment Booked'))
     }
     render(){
         return(
@@ -32,17 +40,19 @@ class ViewBooking extends React.Component{
                                 <center><h2>Confirm Appointment</h2></center>
                             </div>
                         <div className="panel-body">
+                            <form>
+                            {/* <form action="http://localhost:4100/paynow" method="POST"> */}
                             <div className="row">
                                 <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="form-group">
                                         <label>Patient Id</label>
-                                        <input className="form-control" type="text" name="pid" value={`MAX${this.state.pid}`} disabled/>
+                                        <input className="form-control" type="text" name="pid" value={`MAX${this.state.pid}`}/>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="form-group">
                                         <label>Doctor</label>
-                                        <input className="form-control" type="text" name="docname" value={this.state.doctor} disabled/>                                   
+                                        <input className="form-control" type="text" name="doctor" value={this.state.doctor}/>                                   
                                     </div>
                                 </div>
                             </div>
@@ -50,13 +60,13 @@ class ViewBooking extends React.Component{
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="form-group">
                                         <label>Location / City</label>
-                                        <input className="form-control" value={this.state.city}/>
+                                        <input className="form-control" name="city" value={this.state.city}/>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="form-group">
                                         <label>Department</label>
-                                        <input className="form-control" value={this.state.dept}/>
+                                        <input className="form-control" name="dept"value={this.state.dept}/>
                                     </div>
                                 </div>
                             </div>
@@ -98,17 +108,21 @@ class ViewBooking extends React.Component{
                                 <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="form-group">
                                         <label>Fees / Charges</label>
-                                        <input type="text" className="form-control" name="fees" value={this.state.amount} disabled/>
+                                        <input type="text" className="form-control" name="amount" value={this.state.amount}/>
                                     </div>
                                 </div>
                             </div>
                             <center>
                                 <div className="col-lg-12" style={{marginTop:'3%'}}>
-                                 <Link to="/appoint">   <button type="button" className="btn btn-info" style={{width:'150px',fontSize:'20px'}} 
+                                 <Link to="/booking">   <button type="button" className="btn btn-info" style={{width:'150px',fontSize:'20px'}} 
                                    onClick={this.handleSubmit}>Book Appointment</button>
-                                
-                                </Link></div>
+                                  </Link></div>
+                                  {/* <div className="col-lg-12" style={{marginTop:'3%'}}>
+                                  <button type="submit" className="btn btn-info" style={{width:'150px',fontSize:'20px'}} 
+                                   onClick={this.handleSubmit}>Book Appointment</button>
+                                  </div> */}
                             </center>
+                            </form>
                         </div>
                     </div>
             </div>

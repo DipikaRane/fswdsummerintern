@@ -8,7 +8,7 @@ import Services from './Services/Services';
 import Doctor from './Doctor/Doctor';
 import Booking from './Booking/Booking'
 import ViewBooking from './Booking/ViewBooking';
-import Appointment from './Booking/Appointment'
+import Appointment from './Appointment/Appointment'
 
 const Routing=()=>{
     return(
@@ -22,7 +22,7 @@ const Routing=()=>{
         <Route path="/doctor" component={Doctor}/>
         <Route path="/book/:id" component={Booking}/>
         <Route path="/view" component={ViewBooking}/>
-        <Route path="/appoint" component={Appointment}/>
+        <Route path="/booking" component={Appointment}/>
         </BrowserRouter>
     )
     
